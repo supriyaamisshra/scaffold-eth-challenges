@@ -37,7 +37,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = 'localhost';
+const defaultNetwork = 'sepolia';
 
 const getMnemonic = () => {
   try {
@@ -106,6 +106,7 @@ const config: HardhatUserConfig = {
     },
     sepolia: {
       url: "https://sepolia.infura.io/v3/ec6a8acd1d354717acec099ad46a0bab", // <---- YOUR INFURA ID! (or it won't work)
+      gasPrice: 2000,
       accounts: {
         mnemonic: getMnemonic(),
       },
