@@ -31,7 +31,9 @@ export const Events: FC<IEventsProps> = (props) => {
             ? "🎈-->⟠ Address | Trade | AmountOut | AmountIn"
             : eventName === "LiquidityProvided"
               ? "➕ Address | Liquidity Minted | Eth In | Balloons In"
-              : "➖ Address | Liquidity Withdrawn | ETH out | Balloons Out "}
+              : eventName === "LiquidityRemoved"
+                ? "➖ Address | Liquidity Withdrawn | ETH out | Balloons Out "
+                : "➖ Owner | ➖ Spender | Approved Amount"}
       </h2>
       <List
         bordered
